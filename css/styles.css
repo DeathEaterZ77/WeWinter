@@ -145,11 +145,6 @@ button {
     cursor: pointer;
 }
 
-/* paiement.html */
-
-/* styles.css */
-
-/* Réinitialisation des styles par défaut */
 * {
     margin: 0;
     padding: 0;
@@ -211,6 +206,6 @@ footer a:hover {
 
 /* logo */
 .logo {
-    width: 10%; /* pour remplir la largeur du conteneur parent */
-    height: 10px; /* ou spécifiez une hauteur fixe si nécessaire */
+    width: 10%;
+    height: 10px;
 }
