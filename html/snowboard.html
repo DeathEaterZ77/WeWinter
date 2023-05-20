@@ -15,7 +15,6 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <!-- Add links to other main pages here -->
     </ul>
   </nav>
 </header>
@@ -26,8 +25,7 @@
 
     <div class="product-details">
       <div class="product-image">
-        <img src="https://purepng.com/public/uploads/medium/purepng.com-snowboardsnowboardones-footlongwaysglide-on-snow-1701528191193balr2.png"
-             alt="Ski Model 1">
+        <img src="https://purepng.com/public/uploads/medium/purepng.com-snowboardsnowboardones-footlongwaysglide-on-snow-1701528191193balr2.png" alt="Snow Model 1">
       </div>
       <div class="product-info">
         <h3>Snowboard Model 1</h3>
@@ -40,27 +38,49 @@
             <option value="155cm">155cm</option>
             <option value="160cm">160cm</option>
           </select>
-          <input type="submit" value="Add to Cart">
+          <form action="https://example.com/checkout" method="post">
+            <label for="size">Select Color:</label>
+            <select id="size" name="size">
+              <option value="Black">Black</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+              <option value="Pink">Pink</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+          </form>
         </form>
       </div>
+    </div>
 
-      <div class="product-image">
-        <img src="https://images.the-house.com/5150-shifter-54-08-zoom.jpg" alt="Snowboard Model 2">
-      </div>
-      <div class="product-info">
-        <h3>Snowboard Model 2</h3>
-        <p>Versatile snowboard suitable for all skill levels.</p>
-        <p>Price: $180</p>
-        <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Size:</label>
-          <select id="size" name="size">
-            <option value="150cm">150cm</option>
-            <option value="155cm">155cm</option>
-            <option value="160cm">160cm</option>
-          </select>
-          <input type="submit" value="Add to Cart">
-        </form>
-      </div>
+    <div class="product-details">
+        <div class="product-image">
+          <img src="https://images.the-house.com/5150-shifter-54-08-zoom.jpg" alt="Snowboard Model 2">
+        </div>
+        <div class="product-info">
+          <h3>Snowboard Model 2</h3>
+          <p>Versatile snowboard suitable for all skill levels.</p>
+          <p>Price: $180</p>
+          <form action="https://example.com/checkout" method="post">
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+              <option value="150cm">150cm</option>
+              <option value="155cm">155cm</option>
+              <option value="160cm">160cm</option>
+            </select>
+          </form>
+          <form action="https://example.com/checkout" method="post">
+            <label for="size">Select Color:</label>
+            <select id="size" name="size">
+              <option value="Black">Black</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+              <option value="Pink">Pink</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+          </form>
+        </div>
     </div>
 
     <div class="product-details">
@@ -78,11 +98,22 @@
             <option value="155cm">155cm</option>
             <option value="160cm">160cm</option>
           </select>
-          <input type="submit" value="Add to Cart">
+        </form>
+        <form action="https://example.com/checkout" method="post">
+          <label for="size">Select Color:</label>
+          <select id="size" name="size">
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Pink">Pink</option>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+          </select>
         </form>
       </div>
     </div>
-
+    <button onclick="addToCart()">Accès au panier</button>
+    </div>
   </section>
 </main>
 
@@ -93,5 +124,7 @@
     </ul>
   </nav>
 </footer>
+<script src="../js/cart.js"></script>
 </body>
 </html>
+

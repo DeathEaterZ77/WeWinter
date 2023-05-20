@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Bag Items</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header>
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <header>
+    <h1>We Winter</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+      </ul>
+    </nav>
+
+  <h3>Bag Items</h3>
+
+<main>
+  <table>
+    <thead>
+    <tr>
+      <th>Article</th>
+      <th>Quantité</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="cartItems">
+    <tr>
+      <td>Ski Model 1</td>
+      <td id="m1">0</td>
+      <td><button onclick="addToCart('Ski Model 1', 250)">Add to Cart</button></td>
+      <td><button onclick="removeFromCart('Ski Model 1', 250)">Remove</button></td>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Ski Model 2</td>
+      <td class="m2">0</td>
+      <td><button onclick="addToCart('Ski Model 2', 180)">Add to Cart</button></td>
+      <td><button onclick="removeFromCart('Ski Model 2', 180)">Remove</button></td>
+    </tr>
+
+    <tr>
+      <td>Ski Model 3</td>
+      <td class="m3">0</td>
+      <td><button onclick="addToCart('Ski Model 3', 150)">Add to Cart</button></td>
+      <td><button onclick="removeFromCart('Ski Model 3', 150)">Remove</button></td>
+    </tr>
+
+    <tr>
+      <td>Snow Model 1</td>
+      <td id="m1">0</td>
+      <td><button onclick="addToCart('Snow Model 1', 250)">Add to Cart</button></td>
+      <td><button onclick="removeFromCart('Snow Model 1', 250)">Remove</button></td></td>
+    </tr>
+
+    <tr>
+      <td>Snow Model 2</td>
+      <td class="m2">0</td>
+      <td><button onclick="addToCart('Snow Model 2', 180)">Add to Cart</button></td>
+      <td><button onclick="removeFromCart('Snow Model 2', 180)">Remove</button></td>
+    </tr>
+
+    <tr>
+      <td>Snow Model 3</td>
+      <td class="m3">0</td>
+      <td><button onclick="addToCart('Snow Model 3', 150)">Add to Cart</button></td>
+      <td><button onclick="removeFromCart('Snow Model 3', 150)">Remove</button></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <p>Total Price: <span id="totalPrice">0</span> €</p>
+
+
+</main>
+
+<footer>
+  <p>
+    <a href="paiement.html">Proceed to paiement</a>
+<p>
+  <a href="ski.html">Ski Details</a>  <a href="snowboard.html">Snowboard Details</a> <a href="index.html">Home</a>
+
+</footer>
+
+<script src="../js/cart.js"></script>
+<script>
+  function addToCart(articleName, price) {
+    var cartItem = document.getElementById("cartItems").getElementsByTagName("tr");
+    for (var i = 0; i < cartItem.length; i++) {
+      var itemName = cartItem[i].getElementsByTagName("td")[0].innerText;
+      if (itemName === articleName) {
+        var quantityCell = cartItem[i].getElementsByTagName("td")[1];
+        var quantity = parseInt(quantityCell.innerText);
+        quantity++;
+        quantityCell.innerText = quantity.toString();
+        updateTotalPrice(1, price); // Passer 1 pour ajouter le prix total
+        break;
+      }
+    }
+  }
+
+
+  function updateTotalPrice(quantity, price) {
+    var totalPriceElement = document.getElementById("totalPrice");
+    var totalPrice = parseInt(totalPriceElement.innerText);
+    totalPrice += quantity * price;
+    totalPriceElement.innerText = totalPrice.toString();
+  }
+
+  function removeFromCart(articleName, price) {
+    var cartItem = document.getElementById("cartItems").getElementsByTagName("tr");
+    for (var i = 0; i < cartItem.length; i++) {
+      var itemName = cartItem[i].getElementsByTagName("td")[0].innerText;
+      if (itemName === articleName) {
+        var quantityCell = cartItem[i].getElementsByTagName("td")[1];
+        var quantity = parseInt(quantityCell.innerText);
+        if (quantity > 0) {
+          quantity--;
+          quantityCell.innerText = quantity.toString();
+          updateTotalPrice(-1, price); // Passer -1 pour réduire le prix total
+        }
+        break;
+      }
+    }
+  }
+
+
+
+</script>
+</body>
+</html>

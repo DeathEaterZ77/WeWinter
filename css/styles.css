@@ -2,19 +2,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f5f8;
+    background-color: whitesmoke;
 }
 
 header {
     background-color: #1c8bd1;
-    padding: 20px;
+    width: 100%;
     color: white;
     text-align: center;
+    border-image: revert;
+
 }
 
 h1 {
     margin: 0;
     font-size: 32px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -44,7 +49,7 @@ section {
 
 h2 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 32px;
     color: #1c8bd1;
 }
 
@@ -123,4 +128,89 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #186e9e;
+}
+
+/* ski.html */
+
+button {
+    background-color: #186e9e;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* paiement.html */
+
+/* styles.css */
+
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#paymentSection {
+    background-color: #fff;
+    border: 1px solid blueviolet;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 1px;
+    font-size: 11px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+footer a {
+    color: darkviolet;
+    text-decoration: underline;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* logo */
+.logo {
+    width: 10%; /* pour remplir la largeur du conteneur parent */
+    height: 10px; /* ou spécifiez une hauteur fixe si nécessaire */
 }
