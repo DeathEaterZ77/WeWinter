@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <title>Bag Items</title>
   <meta charset = "UTF-8">
@@ -8,14 +9,21 @@
 </head>
 
 <body>
-  <h1>We Winter</h1>
-    <nav>
-      <ul>
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+<header>
+  <img src="../img/logoWeWinter.png" alt="Logo" class="Logo">
 
-      </ul>
-    </nav>
+  <nav>
+    <ul id="Menu">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="ski.html">Ski</a></li>
+      <li><a href="snowboard.html">Snowboard</a></li>
+      <li><a href="ski.html">Skating & Ice Hockey</a></li>
+      <li>
+        <a href="cart.html"><img src="../img/shopping-cart.png" alt="Shopping Cart" id="MenuCart"></a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
   <h3>Bag Items</h3>
 
@@ -34,7 +42,6 @@
       <td id="m1">0</td>
       <td><button onclick="addToCart('Ski Model 1', 250)">Add to Cart</button></td>
       <td><button onclick="removeFromCart('Ski Model 1', 250)">Remove</button></td>
-      </td>
     </tr>
 
     <tr>
@@ -55,7 +62,7 @@
       <td>Snow Model 1</td>
       <td id="m1">0</td>
       <td><button onclick="addToCart('Snow Model 1', 250)">Add to Cart</button></td>
-      <td><button onclick="removeFromCart('Snow Model 1', 250)">Remove</button></td></td>
+      <td><button onclick="removeFromCart('Snow Model 1', 250)">Remove</button></td>
     </tr>
 
     <tr>
@@ -77,15 +84,16 @@
 
   <p>Total Price: <span id="totalPrice">0</span> €</p>
 
-
+  <a href="paiement.html">Proceed to paiement</a>
 </main>
 
 <footer>
-  <a href="paiement.html">Proceed to paiement</a>
-  <a href="ski.html">Ski Details</a>
-  <a href="snowboard.html">Snowboard Details</a>
-  <a href="homepage.html">Home</a>
-
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
 </footer>
 
 

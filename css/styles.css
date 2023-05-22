@@ -6,37 +6,52 @@ body {
 }
 
 header {
-    background-color: #1c8bd1;
-    width: 100%;
-    color: white;
-    text-align: center;
-    border-image: revert;
-
-}
-
-h1 {
-    margin: 0;
-    font-size: 32px;
-    padding: 20px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    box-shadow: 0px 6px 10px lightgrey;
+    height:  100px;
+    width: 100%;
+    padding:  20px 15px;
 }
 
-nav ul {
+header img{
+    object-position: left center;
+    height:  100%;
+}
+
+#Menu {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 15px;
+
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
-    display: inline;
+#Menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     margin-right: 10px;
 }
 
-nav ul li a {
+#Menu li a {
     text-decoration: none;
-    color: darkblue;
+    color: black;
     font-weight: bold;
+    font-size: large;
+}
+#MenuCart{
+    object-position: right center;
+    height: 100%;
+    width: 50px;
 }
 
 main {
@@ -45,6 +60,14 @@ main {
 
 section {
     margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
 }
 
 h2 {
@@ -193,10 +216,24 @@ input[type="submit"]:hover {
     background-color: #555;
 }
 
+footer{
+    background: #07529D;
+    height: 100px;
+    width: 100%;
+    bottom: auto;
+    box-shadow: 0px -8px 10px lightgrey;
 
+    padding: 20px 0 0 20px;
+}
+
+footer nav ul{
+    list-style-type: none;
+}
 footer a {
-    color: darkviolet;
-    text-decoration: underline;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
 
 }
 
@@ -204,8 +241,4 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* logo */
-.logo {
-    width: 10%;
-    height: 10px;
-}
+
