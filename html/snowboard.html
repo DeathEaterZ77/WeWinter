@@ -2,22 +2,21 @@
 <html lang="fr">
 <head>
   <title>Snowboard Details</title>
+  <meta charset = "UTF-8">
   <link rel="stylesheet" type="text/css" href="../css/styles.css">
-  <style>
-    #size {
-    }
-  </style>
+
 </head>
+
 <body>
-<header>
-  <h1>We Winter</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <h1>We Winter</h1>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <main>
   <section>
@@ -39,8 +38,8 @@
             <option value="160cm">160cm</option>
           </select>
           <form action="https://example.com/checkout" method="post">
-            <label for="size">Select Color:</label>
-            <select id="size" name="size">
+            <label for="color">Select Color:</label>
+            <select id="color" name="color">
               <option value="Black">Black</option>
               <option value="Blue">Blue</option>
               <option value="Green">Green</option>
@@ -70,8 +69,8 @@
             </select>
           </form>
           <form action="https://example.com/checkout" method="post">
-            <label for="size">Select Color:</label>
-            <select id="size" name="size">
+            <label for="color">Select Color:</label>
+            <select id="color" name="color">
               <option value="Black">Black</option>
               <option value="Blue">Blue</option>
               <option value="Green">Green</option>
@@ -84,36 +83,36 @@
     </div>
 
     <div class="product-details">
-      <div class="product-image">
-        <img src="https://www.freeride.com/img/review/original/7689_pic1c.jpg" alt="Snowboard Model 3">
+        <div class="product-image">
+          <img src="https://www.freeride.com/img/review/original/7689_pic1c.jpg" alt="Snowboard Model 3">
+        </div>
+        <div class="product-info">
+          <h3>Snowboard Model 3</h3>
+          <p>Beginner-friendly snowboards with enhanced stability.</p>
+          <p>Price: $150</p>
+          <form action="https://example.com/checkout" method="post">
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+              <option value="150cm">150cm</option>
+              <option value="155cm">155cm</option>
+              <option value="160cm">160cm</option>
+            </select>
+          </form>
+          <form action="https://example.com/checkout" method="post">
+            <label for="size">Select Color:</label>
+            <select id="size" name="size">
+              <option value="Black">Black</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+              <option value="Pink">Pink</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+          </form>
+        </div>
       </div>
-      <div class="product-info">
-        <h3>Snowboard Model 3</h3>
-        <p>Beginner-friendly snowboards with enhanced stability.</p>
-        <p>Price: $150</p>
-        <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Size:</label>
-          <select id="size" name="size">
-            <option value="150cm">150cm</option>
-            <option value="155cm">155cm</option>
-            <option value="160cm">160cm</option>
-          </select>
-        </form>
-        <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Color:</label>
-          <select id="size" name="size">
-            <option value="Black">Black</option>
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
-            <option value="Pink">Pink</option>
-            <option value="Silver">Silver</option>
-            <option value="Gold">Gold</option>
-          </select>
-        </form>
-      </div>
-    </div>
-    <button onclick="addToCart()">Accès au panier</button>
-    </div>
+      <button onclick="addToCart()">Accès au panier</button>
+
   </section>
 </main>
 
