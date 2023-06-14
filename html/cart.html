@@ -2,22 +2,24 @@
 <html lang="fr">
 
 <head>
-  <title>Bag Items</title>
+  <title>My Cart</title>
   <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
   <script src="../js/cart.js"></script>
 </head>
 
 <body>
 <header>
-  <img src="../img/logoWeWinter.png" alt="Logo" class="Logo">
+  <a href="homepage.html"><img src="../img/logoWeWinter.png" alt="Logo" class="Logo"></a>
 
   <nav>
     <ul id="Menu">
       <li><a href="homepage.html">Home</a></li>
       <li><a href="ski.html">Ski</a></li>
       <li><a href="snowboard.html">Snowboard</a></li>
-      <li><a href="ski.html">Skating & Ice Hockey</a></li>
+      <li><a href="ice.html">Skating & Ice Hockey</a></li>
       <li>
         <a href="cart.html"><img src="../img/shopping-cart.png" alt="Shopping Cart" id="MenuCart"></a>
       </li>
@@ -25,66 +27,80 @@
   </nav>
 </header>
 
-  <h3>Bag Items</h3>
 
-<main>
+<main class = main-cart>
+  <div class="products_title">
+    <h3>Our catalog</h3>
+  </div>
+
+  <img src="../img/skis_cart_cover.jpg" alt="Ski Cover" class="cover">
+
   <table>
     <thead>
     <tr>
-      <th>Article</th>
-      <th>Quantité</th>
+      <th>Item</th>
+      <th>Quantity</th>
       <th>Action</th>
     </tr>
     </thead>
     <tbody id="cartItems">
     <tr>
-      <td>Ski Model 1</td>
-      <td id="m1">0</td>
-      <td><button onclick="addToCart('Ski Model 1', 250)">Add to Cart</button></td>
-      <td><button onclick="removeFromCart('Ski Model 1', 250)">Remove</button></td>
+      <td>Head Titan Ski</td>
+      <td class="s1">0</td>
+      <td><button onclick="addToCart('Head Titan Ski', 250)">Add to Cart</button>
+      <button onclick="removeFromCart('Head Titan Ski', 250)">Remove</button></td>
     </tr>
 
     <tr>
-      <td>Ski Model 2</td>
-      <td class="m2">0</td>
-      <td><button onclick="addToCart('Ski Model 2', 180)">Add to Cart</button></td>
-      <td><button onclick="removeFromCart('Ski Model 2', 180)">Remove</button></td>
+      <td>Dynastar Speed Konect Ski</td>
+      <td class="s2">0</td>
+      <td><button onclick="addToCart('Dynastar Speed Konect Ski', 195)">Add to Cart</button>
+      <button onclick="removeFromCart('Dynastar Speed Konect Ski', 195)">Remove</button></td>
     </tr>
 
     <tr>
-      <td>Ski Model 3</td>
-      <td class="m3">0</td>
-      <td><button onclick="addToCart('Ski Model 3', 150)">Add to Cart</button></td>
-      <td><button onclick="removeFromCart('Ski Model 3', 150)">Remove</button></td>
+      <td>Volt Revolt Ski</td>
+      <td class="s3">0</td>
+      <td><button onclick="addToCart('Volt Revolt Ski', 380)">Add to Cart</button>
+      <button onclick="removeFromCart('Volt Revolt Ski', 380)">Remove</button></td>
     </tr>
 
     <tr>
-      <td>Snow Model 1</td>
-      <td id="m1">0</td>
-      <td><button onclick="addToCart('Snow Model 1', 250)">Add to Cart</button></td>
-      <td><button onclick="removeFromCart('Snow Model 1', 250)">Remove</button></td>
+      <td>Roxy Aqua Snowboard</td>
+      <td class="sn1">0</td>
+      <td><button onclick="addToCart('Roxy Aqua Snowboard', 170)">Add to Cart</button>
+        <button onclick="removeFromCart('Roxy Aqua Snowboard', 170)">Remove</button></td>
     </tr>
 
     <tr>
-      <td>Snow Model 2</td>
-      <td class="m2">0</td>
-      <td><button onclick="addToCart('Snow Model 2', 180)">Add to Cart</button></td>
-      <td><button onclick="removeFromCart('Snow Model 2', 180)">Remove</button></td>
+      <td>Rossignol XV Wide Snowboard</td>
+      <td class="sn2">0</td>
+      <td><button onclick="addToCart('Rossignol XV Wide Snowboard', 140)">Add to Cart</button>
+      <button onclick="removeFromCart('Rossignol XV Wide Snowboard', 140)">Remove</button></td>
     </tr>
 
     <tr>
-      <td>Snow Model 3</td>
-      <td class="m3">0</td>
-      <td><button onclick="addToCart('Snow Model 3', 150)">Add to Cart</button></td>
-      <td><button onclick="removeFromCart('Snow Model 3', 150)">Remove</button></td>
+      <td>Jones Twin Sister Snowboard</td>
+      <td class="sn3">0</td>
+      <td><button onclick="addToCart('Jones Twin Sister Snowboard', 230)">Add to Cart</button>
+      <button onclick="removeFromCart('Jones Twin Sister Snowboard', 230)">Remove</button></td>
     </tr>
-
+    <tr class="last-row">
+      <!-- the last row is for the total price and takes 3 columns -->
+        <td colspan="3">
+          <p>Total Price : <span id="totalPrice">0</span> €</p>
+          <button onclick="goToPayPage();">Proceed to payment</button>
+        </td>
+    </tr>
     </tbody>
   </table>
-
-  <p>Total Price: <span id="totalPrice">0</span> €</p>
-
-  <a href="paiement.html">Proceed to paiement</a>
+  <script>
+    function goToPayPage() {
+      var totalPrice = document.getElementById("totalPrice").innerHTML;
+      localStorage.setItem("totalPrice", totalPrice);
+      window.location.href = "paiement.html";
+    }
+  </script>
 </main>
 
 <footer>
@@ -96,50 +112,5 @@
     </nav>
 </footer>
 
-
-<script>
-  function addToCart(articleName, price) {
-    var cartItem = document.getElementById("cartItems").getElementsByTagName("tr");
-    for (let i = 0; i < cartItem.length; i++) {
-      var itemName = cartItem[i].getElementsByTagName("td")[0].innerText;
-      if (itemName === articleName) {
-        var quantityCell = cartItem[i].getElementsByTagName("td")[1];
-        var quantity = parseInt(quantityCell.innerText);
-        quantity++;
-        quantityCell.innerText = quantity.toString();
-        updateTotalPrice(1, price); // Passer 1 pour ajouter le prix total
-        break;
-      }
-    }
-  }
-
-
-  function updateTotalPrice(quantity, price) {
-    var totalPriceElement = document.getElementById("totalPrice");
-    var totalPrice = parseInt(totalPriceElement.innerText);
-    totalPrice += quantity * price;
-    totalPriceElement.innerText = totalPrice.toString();
-  }
-
-  function removeFromCart(articleName, price) {
-    var cartItem = document.getElementById("cartItems").getElementsByTagName("tr");
-    for (let i = 0; i < cartItem.length; i++) {
-      var itemName = cartItem[i].getElementsByTagName("td")[0].innerText;
-      if (itemName === articleName) {
-        var quantityCell = cartItem[i].getElementsByTagName("td")[1];
-        var quantity = parseInt(quantityCell.innerText);
-        if (quantity > 0) {
-          quantity--;
-          quantityCell.innerText = quantity.toString();
-          updateTotalPrice(-1, price); // Passer -1 pour réduire le prix total
-        }
-        break;
-      }
-    }
-  }
-
-
-
-</script>
 </body>
 </html>

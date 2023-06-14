@@ -2,7 +2,9 @@
 <html lang="fr">
 
 <head>
-  <title>About We Winter</title>
+  <title>Contact We Winter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="../css/styles.css">
   <meta charset="UTF-8">
 </head>
@@ -10,14 +12,14 @@
 
 <body>
 <header>
-  <img src="../img/logoWeWinter.png" alt="Logo" class="Logo">
+  <a href="homepage.html"><img src="../img/logoWeWinter.png" alt="Logo" class="Logo"></a>
 
   <nav>
     <ul id="Menu">
       <li><a href="homepage.html">Home</a></li>
       <li><a href="ski.html">Ski</a></li>
       <li><a href="snowboard.html">Snowboard</a></li>
-      <li><a href="ski.html">Skating & Ice Hockey</a></li>
+      <li><a href="ice.html">Skating & Ice Hockey</a></li>
       <li>
         <a href="cart.html"><img src="../img/shopping-cart.png" alt="Shopping Cart" id="MenuCart"></a>
       </li>
@@ -26,12 +28,13 @@
 </header>
 
 <main>
-  <section>
+  <section class="about" >
     <h2>Contact Us</h2>
     <p>Feel free to get in touch with us for any inquiries or requests.</p>
 
-    <div class="contact-form">
-      <form>
+
+    <form class="contact-form">
+      <fieldset class = info-form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -40,15 +43,19 @@
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
-
+      </fieldset>
+      <fieldset class="form-submit">
         <input type="submit" value="Send Message">
-      </form>
-    </div>
+      </fieldset>
+
+    </form>
 
     <div class="contact-info">
       <h3>Contact Information</h3>
-      <p>Email: wewinter@gmail.com</p>
-      <p>Phone: +33 1 23 45 67 89</p>
+      <span>
+        <p>Email: wewinter@gmail.com</p>
+        <p>Phone: +33 1 23 45 67 89</p>
+      </span>
     </div>
   </section>
 </main>

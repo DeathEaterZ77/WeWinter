@@ -4,19 +4,24 @@
   <title>We Winter</title>
   <meta charset = "UTF-8">
   <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+
   <header>
-    <img src="../img/logoWeWinter.png" alt="Logo" class="Logo">
+    <a href="homepage.html"><img src="../img/logoWeWinter.png" alt="Logo" class="Logo"></a>
 
     <nav>
       <ul id="Menu">
         <li><a href="homepage.html">Home</a></li>
         <li><a href="ski.html">Ski</a></li>
         <li><a href="snowboard.html">Snowboard</a></li>
-        <li><a href="ski.html">Skating & Ice Hockey</a></li>
+        <li><a href="ice.html">Skating & Ice Hockey</a></li>
         <li>
           <a href="cart.html"><img src="../img/shopping-cart.png" alt="Shopping Cart" id="MenuCart"></a>
         </li>
@@ -25,37 +30,66 @@
   </header>
 
 <main>
-  <section>
-    <h2>Welcome to our Winter Sports Equipements Store!</h2>
+  <div id="homepage_front">
+    <h1>Dive into the wild winter sports aventure.</h1>
+    <h3>Whether you're into skiing, snowboarding, or ice skating, we've got you covered.</h3>
+  </div>
 
-    <p>Find all the gear you need for your winter adventures. Whether you're into skiing, snowboarding, or ice skating, we've got you covered.</p>
+  <img src="../img/karsten-winegeart.jpg" alt="Skier" class="cover">
 
+  <div class="products_title">
     <h3>Featured Products</h3>
-    <div class="product">
-      <img src="https://pngimg.com/uploads/skiing/skiing_PNG38256.png" alt="Ski">
-      <h4>Ski</h4>
-      <p>High-performance skis for all skill levels.</p>
-      <a href="ski.html">Learn More</a>
+  </div>
+
+  <section class="homepage_products">
+
+    <div class="product" onclick="window.location.href='ski.html'">
+      <img src="https://www.xspo.fr/media/image/f0/ea/d8/22_ss-e-titan_313281.jpg" alt="Head Titan Ski">
+      <h4>Head Titan Ski</h4>
+      <p>High-performance skis for advanced skiers.</p>
     </div>
 
-    <div class="product">
-      <img src="https://purepng.com/public/uploads/medium/purepng.com-snowboardsnowboardones-footlongwaysglide-on-snow-1701528191193balr2.png" alt="Snowboard">
-      <h4>Snowboard</h4>
-      <p>Explore the mountains with our top-quality snowboards.</p>
-      <a href="snowboard.html">Learn More</a>
+    <div class="product" onclick="window.location.href='ski.html'">
+      <img src="https://www.xspo.de/media/image/fb/1c/05/23_speed-763-konect_DRMZ202.jpg" alt="Dynastar Ski Model">
+      <h4>Dynastar Speed Konect Ski</h4>
+      <p>Versatile skis suitable for all skill levels.</p>
+    </div>
+
+    <div class="product" onclick="window.location.href='ski.html'">
+      <img src="https://www.xspo.de/media/image/d4/c9/f9/22_revolt-104-flat_122442.jpg" alt="Volk Revolt Ski">
+      <h4>Volk Revolt Ski</h4>
+      <p>Race competition level skis with enhanced stability.</p>
+    </div>
+
+    <div class="product" onclick="window.location.href='snowboard.html'">
+      <img src="https://m.media-amazon.com/images/I/61i1f6yHH2L.jpg" alt="Snowboard">
+      <h4>Roxy Aqua Snowboard</h4>
+      <p>High-performance snowboards for advanced snowboarders.</p>
+    </div>
+
+    <div class="product" onclick="window.location.href='snowboard.html'">
+      <img src="https://www.tradeinn.com/f/13776/137767767/rossignol-planche-snowboard-xv-xv-m-l.jpg" alt="Snowboard">
+      <h4>Rossignol XV Wide Snowboard</h4>
+      <p>Versatile and beginner-friendly snowboard suitable for all skill levels.</p>
+    </div>
+
+    <div class="product" onclick="window.location.href='snowboard.html'">
+      <img src="https://images.squarespace-cdn.com/content/v1/637558eccf6f58307d272f25/1669310472113-82SHW1IM332P9FJZIM52/sb_j_tsw.jpg?format=1000w" alt="Snowboard">
+      <h4>Jones Twin Sister Snowboard</h4>
+      <p>Freeride and top-quality snowboard for experimented riders.</p>
     </div>
 
   </section>
 </main>
 
-<footer>
-  <nav>
-    <ul>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
-</footer>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </footer>
 
 </body>
 </html>

@@ -3,7 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
+
 
 header {
     display: flex;
@@ -18,9 +24,18 @@ header {
     padding:  20px 15px;
 }
 
-header img{
+.Logo{
     object-position: left center;
-    height:  100%;
+    height: 100%;
+    width: 300px;
+    transition: all 0.5s ease;
+
+}
+
+.Logo:hover{
+    transform: scale(1.02);
+    /* smooth animation */
+    transition: all 0.5s ease;
 }
 
 #Menu {
@@ -48,52 +63,99 @@ header img{
     font-weight: bold;
     font-size: large;
 }
+
+#Menu li a:hover {
+    color: #0488D1;
+    font-style: italic;
+}
+
+
 #MenuCart{
     object-position: right center;
     height: 100%;
     width: 50px;
+    transition: all 0.5s ease;
 }
 
-main {
-    padding: 20px;
+#MenuCart:hover{
+    filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);
+    /* make the image bigger */
+    transform: scale(1.1);
+    /* smooth animation */
+    transition: all 0.5s ease;
 }
 
-section {
-    margin-bottom: 20px;
+.cover{
+    width: 100%;
 }
 
-h1 {
-    margin: 0;
-    font-size: 32px;
-    padding: 20px;
+
+.homepage_products {
+    margin: 20px 15px;
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-h2 {
-    margin-top: 0;
-    font-size: 32px;
-    color: #1c8bd1;
+#homepage_front {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
 }
+
+#homepage_front h1 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: 'Shrikhand';
+    color: #0488D1;
+}
+
+#homepage_front h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.products_title{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+.products_title h3 {
+    font-size: 36px;
+    font-family: 'Shrikhand';
+    color: #0488D1;
+}
+
 
 .product {
-    display: inline-block;
-    width: 250px;
+    cursor: pointer;
+    width: 300px;
     margin: 10px;
     padding: 10px;
+
+    border-radius: 10px;
     border: 1px solid #ccc;
     background-color: #fff;
+
+    transition: all 0.5s ease;
+}
+
+.product:hover {
+    box-shadow: 0px 6px 10px lightgrey;
+    transform: scale(1.03);
+    transition: all 0.5s ease;
 }
 
 .product img {
     width: 100%;
-    max-height: 200px;
+    max-height: 300px;
     object-fit: cover;
 }
 
 .product h4 {
-    margin-top: 10px;
-    color: #1c8bd1;
+    margin-top: 15px;
+    color: #0488D1;
 }
 
 .product p {
@@ -101,30 +163,46 @@ h2 {
     color: #666;
 }
 
-.product a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #1c8bd1;
-    font-weight: bold;
-}
 
-.product-details {
-    margin-top: 20px;
+.product-model {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width:600px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+
+    transition: all 0.5s ease;
 }
 
-.product-details img {
-    width: 300px;
-    height: auto;
+.product-model:hover {
+    box-shadow: 0 6px 10px lightgrey;
+    transform: scale(1.005);
+    transition: all 0.5s ease;
 }
 
-.product-details h3 {
+.product-model img {
+    padding:10px;
+    width: 50%;
+    object-fit: contain;
+}
+
+.product-info{
+    height: 100%;
+    width:100%;
+    padding:10px;
+}
+
+.product-info h3 {
     margin-top: 10px;
-    color: #1c8bd1;
+    color: #0488D1;
 }
 
-.product-details p {
+.product-info p {
     margin-top: 5px;
     color: #666;
 }
@@ -132,7 +210,7 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #1c8bd1;
+    color: #0488D1;
 }
 
 select {
@@ -142,7 +220,7 @@ select {
 }
 
 input[type="submit"] {
-    background-color: #1c8bd1;
+    background-color: #0488D1;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -150,13 +228,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #186e9e;
+    background-color: #0488D1;
 }
 
 /* ski.html */
 
 button {
-    background-color: #186e9e;
+    background-color: #07529D;
     border: none;
     color: white;
     padding: 8px 16px;
@@ -175,34 +253,86 @@ button {
 }
 
 
-#paymentSection {
-    background-color: #fff;
-    border: 1px solid blueviolet;
-    padding: 20px;
-    margin-bottom: 20px;
-}
 
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-select {
+#paymentSection,.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 1px;
-    font-size: 11px;
-    border: 1px solid black;
+    padding: 40px;
+}
+
+fieldset{
+    border:none;
+}
+.form-CB{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top:0;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
+legend {
+    font-family: 'Shrikhand', cursive;
+    padding: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0488D1;
+}
 
-input[type="submit"] {
+.form-CB legend{
+    margin-left: 20px;
+}
+
+.form-submit legend{
+    margin-left: 0;
+    text-align: center;
+}
+
+
+
+
+label {
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+label span{
+    font-weight: normal;
+    color: #777;
+}
+
+input[type="number"], input[type="text"], input[type="email"],textarea, select {
+    height: fit-content;
+    width:fit-content;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea{
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+.form-submit input{
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -212,21 +342,187 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #555;
+#expirationMonth,#expirationYear{
+    width: 100px;
 }
 
+
+.form-submit input{
+    margin:0;
+    padding: 15px;
+    border: none;
+    background-color: #0488D1;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s ease-out;
+    /* put all the elements in the middle*/
+    display: flex;
+    justify-content: center;
+
+}
+.form-submit input:hover{
+    /* nice slide of the background color from the left to the right that reveal a white background with blue text */
+    background-image: linear-gradient(to right, #1c8bd1, #1c8bd1 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    color: black;
+}
+
+
+
+
+
+
+/* cart.html */
+.main-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 20px;
+    width: 70%;
+    min-width: 500px;
+
+}
+
+thead,tbody{
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+tbody tr td:last-child{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}
+tr button{
+    width: 100%;
+    margin:0;
+    padding: 15px 5px;
+    border: none;
+    background-color: #0488D1;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s ease-out;
+
+}
+tr button:hover{
+    /* nice slide of the background color from the left to the right that reveal a white background with blue text */
+    background-image: linear-gradient(to right, #1c8bd1, #1c8bd1 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    color: black;
+}
+
+.last-row td{
+    display: table-cell !important;
+}
+
+.last-row td p{
+    margin: 25px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+}
+
+.about h2{
+    font-family: 'Shrikhand', cursive;
+    font-size: 40px;
+    color: #0488D1;
+    margin: 20px;
+}
+
+.about ul{
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about ul li{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-form .info-form{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top:0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+
+.contact-info h3{
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+    color: #0488D1;
+}
+
+.contact-info span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-info span p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* footer */
 footer{
+    align-self: flex-end;
     background: #07529D;
-    height: 100px;
     width: 100%;
     bottom: auto;
-    box-shadow: 0px -8px 10px lightgrey;
+    box-shadow: 0 -8px 10px lightgrey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-    padding: 20px 0 0 20px;
 }
-
 footer nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:50px;
+    gap:30px;
     list-style-type: none;
 }
 footer a {
@@ -242,3 +538,38 @@ footer a:hover {
 }
 
 
+/* media queries */
+@media screen and (max-width: 900px) {
+    #Menu li:not(:last-child) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .product-model{
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    tbody tr td:last-child {
+        flex-direction: column;
+    }
+    table{
+        width: 100%;
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #Menu li {
+        display: none;
+    }
+    .Logo {
+        width: 100%;
+        height: 100%;
+    }
+}

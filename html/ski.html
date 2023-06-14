@@ -2,22 +2,26 @@
 <html lang="fr">
 
 <head>
-  <title>Ski Details</title>
+  <title>Ski Products</title>
   <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+  <script src="../js/product_page.js"></script>
 
 </head>
 
 <body>
 <header>
-  <img src="../img/logoWeWinter.png" alt="Logo" class="Logo">
+  <a href="homepage.html"><img src="../img/logoWeWinter.png" alt="Logo" class="Logo"></a>
 
   <nav>
     <ul id="Menu">
       <li><a href="homepage.html">Home</a></li>
       <li><a href="ski.html">Ski</a></li>
       <li><a href="snowboard.html">Snowboard</a></li>
-      <li><a href="ski.html">Skating & Ice Hockey</a></li>
+      <li><a href="ice.html">Skating & Ice Hockey</a></li>
       <li>
         <a href="cart.html"><img src="../img/shopping-cart.png" alt="Shopping Cart" id="MenuCart"></a>
       </li>
@@ -26,28 +30,34 @@
 </header>
 
 <main>
-  <section>
-    <h2>Ski Details</h2>
 
-    <div class="product-details">
-      <div class="product-image">
-        <img src="https://pngimg.com/uploads/skiing/skiing_PNG38256.png" alt="Ski Model 1">
-      </div>
+  <div class="products_title">
+    <h3>Our Ski Models</h3>
+  </div>
+
+  <img src="../img/ski_cover.jpg" alt="Ski Cover" class="cover">
+
+  <section class="homepage_products">
+
+    <div class="product-model">
+
+      <img src="https://www.xspo.fr/media/image/f0/ea/d8/22_ss-e-titan_313281.jpg" alt="Ski Model 1">
+
       <div class="product-info">
-        <h3>Ski Model 1</h3>
+        <h3>Head Titan</h3>
         <p>High-performance skis for advanced skiers.</p>
-        <p>Price: $250</p>
+        <p>$250</p>
         <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Size:</label>
-          <select id="size" name="size">
+          <label for="size1">Select Size:</label>
+          <select id="size1" name="size">
             <option value="160cm">160cm</option>
             <option value="170cm">170cm</option>
             <option value="180cm">180cm</option>
           </select>
         </form>
         <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Color:</label>
-          <select id="size" name="size">
+          <label for="color1">Select Color:</label>
+          <select id="color1" name="color">
             <option value="Black">Black</option>
             <option value="Red">Red</option>
             <option value="Blue">Blue</option>
@@ -59,29 +69,28 @@
             <option value="Silver">Silver</option>
           </select>
         </form>
+        <button onclick="addToCart('s1',250);">Add to cart</button>
       </div>
 
     </div>
 
-    <div class="product-details">
-      <div class="product-image">
-        <img src="https://m.media-amazon.com/images/I/81mjm88VUEL._AC_SL1500_.jpg" alt="Ski Model 2">
-      </div>
+    <div class="product-model">
+      <img src="https://www.xspo.de/media/image/fb/1c/05/23_speed-763-konect_DRMZ202.jpg" alt="Ski Model 2">
       <div class="product-info">
-        <h3>Ski Model 2</h3>
+        <h3>Dynastar Speed Konect</h3>
         <p>Versatile skis suitable for all skill levels.</p>
-        <p>Price: $180</p>
+        <p>$195</p>
         <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Size:</label>
-          <select id="size" name="size">
+          <label for="size2">Select Size:</label>
+          <select id="size2" name="size">
             <option value="150cm">160cm</option>
             <option value="160cm">170cm</option>
             <option value="170cm">180cm</option>
           </select>
         </form>
         <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Color:</label>
-          <select id="size" name="size">
+          <label for="color2">Select Color:</label>
+          <select id="color2" name="color">
             <option value="Black">Black</option>
             <option value="Red">Red</option>
             <option value="Blue">Blue</option>
@@ -93,28 +102,28 @@
             <option value="Silver">Silver</option>
           </select>
         </form>
+        <button onclick="addToCart('s2',180);">Add to cart</button>
       </div>
     </div>
 
-    <div class="product-details">
-      <div class="product-image">
-        <img src="https://www.littleskiers.co.uk/media/catalog/product/cache/bbf9199ac28155165db9ef0864e0dea8/l/i/little_skiers_toddler_skis_1000_x_1000.jpg" alt="Ski Model 3">
-      </div>
+    <div class="product-model">
+      <img src="https://www.xspo.de/media/image/d4/c9/f9/22_revolt-104-flat_122442.jpg" alt="Ski Model 3">
+
       <div class="product-info">
-        <h3>Ski Model 3</h3>
-        <p>Beginner-friendly skis with enhanced stability.</p>
-        <p>Price: $150</p>
+        <h3>Volt Revolt</h3>
+        <p>Race competition level skis with enhanced stability.</p>
+        <p>$380</p>
         <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Size:</label>
-          <select id="size" name="size">
+          <label for="size3">Select Size:</label>
+          <select id="size3" name="size">
             <option value="160cm">160cm</option>
             <option value="170cm">170cm</option>
             <option value="180cm">180cm</option>
           </select>
         </form>
         <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Color:</label>
-          <select id="size" name="size">
+          <label for="color3">Select Color:</label>
+          <select id="color3" name="color">
             <option value="Black">Black</option>
             <option value="Red">Red</option>
             <option value="Blue">Blue</option>
@@ -126,10 +135,12 @@
             <option value="Silver">Silver</option>
           </select>
         </form>
+        <button onclick="addToCart('s3',150);">Add to cart</button>
       </div>
     </div>
-    <button onclick="addToCart()">Accès au panier</button>
+
   </section>
+
 </main>
 
 
@@ -142,7 +153,6 @@
   </nav>
 </footer>
 
-<script src="../js/cart.js"></script>
 
 </body>
 </html>

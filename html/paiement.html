@@ -4,19 +4,22 @@
 <head>
     <title>Paiement</title>
     <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
 <body>
 <header>
-    <img src="../img/logoWeWinter.png" alt="Logo" class="Logo">
+    <a href="homepage.html"><img src="../img/logoWeWinter.png" alt="Logo" class="Logo"></a>
 
     <nav>
         <ul id="Menu">
             <li><a href="homepage.html">Home</a></li>
             <li><a href="ski.html">Ski</a></li>
             <li><a href="snowboard.html">Snowboard</a></li>
-            <li><a href="ski.html">Skating & Ice Hockey</a></li>
+            <li><a href="ice.html">Skating & Ice Hockey</a></li>
             <li>
                 <a href="cart.html"><img src="../img/shopping-cart.png" alt="Shopping Cart" id="MenuCart"></a>
             </li>
@@ -25,79 +28,107 @@
 </header>
 
 <main>
-    <div id="paymentSection">
-        <h2>Effectuer le paiement</h2>
-        <form>
-            <div class="form-group">
-                <label for="cardNumber">Numéro de carte de crédit :</label>
-                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
-            </div>
+    <div class="products_title">
+        <h3>Make the payment</h3>
+    </div>
 
-            <div class="form-group">
-                <label for="expirationMonth">Date d'expiration :</label>
+    <img src="../img/ski_action_cover.jpg" alt="Ski Cover" class="cover">
+
+
+    <form id="paymentSection">
+            <fieldset class="form-CB">
+                <legend>Bank details :</legend>
+                <label for="cardNumber">Credit Card Number :</label>
+                <input type="number" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+                <label for="expirationMonth">Expiration date :</label>
                 <div class="expiration-inputs">
                     <select id="expirationMonth" name="expirationMonth" required>
                         <option value="" selected disabled>Mois</option>
-                        <option value="01">01 - Janvier</option>
-                        <option value="02">02 - Février</option>
-                        <option value="03">03 - Mars</option>
-                        <option value="04">04 - Avril</option>
-                        <option value="05">05 - Mai</option>
-                        <option value="06">06 - Juin</option>
-                        <option value="07">07 - Juillet</option>
-                        <option value="08">08 - Août</option>
-                        <option value="09">09 - Septembre</option>
-                        <option value="10">10 - Octobre</option>
-                        <option value="11">11 - Novembre</option>
-                        <option value="12">12 - Décembre</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                     </select>
 
                     <select id="expirationYear" name="expirationYear" required>
                         <option value="" selected disabled>Année</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                        <option value="2028">2028</option>
-                        <option value="2029">2029</option>
-                        <option value="2030">2030</option>
-                        <option value="2031">2031</option>
-                        <option value="2032">2032</option>
-                        <option value="2033">2033</option>
-                        <option value="2034">2034</option>
-                        <option value="2035">2035</option>
-                        <option value="2036">2036</option>
+                        <option value="2023">23</option>
+                        <option value="2024">24</option>
+                        <option value="2025">25</option>
+                        <option value="2026">26</option>
+                        <option value="2027">27</option>
+                        <option value="2028">28</option>
+                        <option value="2029">29</option>
+                        <option value="2030">30</option>
+                        <option value="2031">31</option>
+                        <option value="2032">32</option>
+                        <option value="2033">33</option>
+                        <option value="2034">34</option>
+                        <option value="2035">35</option>
+                        <option value="2036">36</option>
 
                     </select>
                 </div>
-                <small>Sélectionnez le mois et l'année d'expiration de votre carte</small>
-            </div>
 
-            <div class="form-group">
-                <label for="cvv">CVV :</label>
-                <input type="text" id="cvv" name="cvv" placeholder="123" required>
-            </div>
+                <label for="cvv">CVV : <span>(the cryptogram of 3 digits is on the back of your credit card)</span></label>
+                <input type="number" id="cvv" name="cvv" placeholder="123">
+            </fieldset>
 
-            <div class="form-group">
-                <input type="submit" value="Valider le paiement">
-            </div>
+            <fieldset class="form-submit">
+                <legend id="totalPrice"></legend>
+                <input type="submit" value="Confirm the payment" onclick="
+                event.preventDefault();
+                /* check if the form is valid */
+                if (!document.getElementById('paymentSection').checkValidity()) {
+                    alert('Veuillez remplir tous les champs !');
+                    return;
+                } else if (document.getElementById('cardNumber').value.length !== 19) {
+                    alert('Veuillez entrer un numéro de carte valide !');
+                    return;
+                } else if (document.getElementById('cvv').value.length !== 3) {
+                    alert('Veuillez entrer un CVV valide !');
+                    return;
+                }
+                localStorage.clear();
+                alert('Votre commande a bien été prise en compte !');
+                window.location.href='about.html';">
+
+            </fieldset>
         </form>
-    </div>
+
 </main>
 
 <footer>
-    <a href="cart.html">Retour au panier</a>
-    <a href="contact.html">About</a>
+    <nav>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
 </footer>
 
 <script>
     // Récupérer le prix total de la page cart.html
     var totalPrice = localStorage.getItem("totalPrice");
-
-    // Afficher le prix total dans la page paiement.htmml
+    if (totalPrice == null) {
+        totalPrice = "erreur dans le prix...";
+        document.querySelector(".form-submit input").style.display = "none";
+    }else {
+        totalPrice = totalPrice + "€";
+    }
+    // Afficher le prix total dans la page paiement.html
     var totalPriceElement = document.getElementById("totalPrice");
-    totalPriceElement.innerText = totalPrice + " €";
+
+    totalPriceElement.innerText = totalPrice;
 </script>
 
 

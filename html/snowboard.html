@@ -2,22 +2,26 @@
 <html lang="fr">
 
 <head>
-  <title>Snowboard Details</title>
+  <title>Snowboard Products</title>
   <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+  <script src="../js/product_page.js"></script>
 
 </head>
 
 <body>
 <header>
-  <img src="../img/logoWeWinter.png" alt="Logo" class="Logo">
+  <a href="homepage.html"><img src="../img/logoWeWinter.png" alt="Logo" class="Logo"></a>
 
   <nav>
     <ul id="Menu">
       <li><a href="homepage.html">Home</a></li>
       <li><a href="ski.html">Ski</a></li>
       <li><a href="snowboard.html">Snowboard</a></li>
-      <li><a href="ski.html">Skating & Ice Hockey</a></li>
+      <li><a href="ice.html">Skating & Ice Hockey</a></li>
       <li>
         <a href="cart.html"><img src="../img/shopping-cart.png" alt="Shopping Cart" id="MenuCart"></a>
       </li>
@@ -26,58 +30,29 @@
 </header>
 
 <main>
-  <section>
-    <h2>Snowboard Details</h2>
+  <div class="products_title">
+    <h3>Our Snowboard Models</h3>
+  </div>
 
-    <div class="product-details">
-      <div class="product-image">
-        <img src="https://purepng.com/public/uploads/medium/purepng.com-snowboardsnowboardones-footlongwaysglide-on-snow-1701528191193balr2.png" alt="Snow Model 1">
-      </div>
+  <img src="../img/snowboard_cover.jpg" alt="Ski Cover" class="cover">
+    <section class="homepage_products">
+    <div class="product-model">
+        <img src="https://m.media-amazon.com/images/I/61i1f6yHH2L.jpg" alt="Snow Model 1">
       <div class="product-info">
-        <h3>Snowboard Model 1</h3>
+        <h3>Roxy Aqua Snowboard</h3>
         <p>High-performance snowboards for advanced snowboarders.</p>
-        <p>Price: $250</p>
+        <p>$170</p>
         <form action="https://example.com/checkout" method="post">
-          <label for="size">Select Size:</label>
-          <select id="size" name="size">
+          <label for="size1">Select Size:</label>
+          <select id="size1" name="size">
             <option value="150cm">150cm</option>
             <option value="155cm">155cm</option>
             <option value="160cm">160cm</option>
           </select>
-          <form action="https://example.com/checkout" method="post">
-            <label for="color">Select Color:</label>
-            <select id="color" name="color">
-              <option value="Black">Black</option>
-              <option value="Blue">Blue</option>
-              <option value="Green">Green</option>
-              <option value="Pink">Pink</option>
-              <option value="Silver">Silver</option>
-              <option value="Gold">Gold</option>
-            </select>
-          </form>
         </form>
-      </div>
-    </div>
-
-    <div class="product-details">
-        <div class="product-image">
-          <img src="https://images.the-house.com/5150-shifter-54-08-zoom.jpg" alt="Snowboard Model 2">
-        </div>
-        <div class="product-info">
-          <h3>Snowboard Model 2</h3>
-          <p>Versatile snowboard suitable for all skill levels.</p>
-          <p>Price: $180</p>
-          <form action="https://example.com/checkout" method="post">
-            <label for="size">Select Size:</label>
-            <select id="size" name="size">
-              <option value="150cm">150cm</option>
-              <option value="155cm">155cm</option>
-              <option value="160cm">160cm</option>
-            </select>
-          </form>
-          <form action="https://example.com/checkout" method="post">
-            <label for="color">Select Color:</label>
-            <select id="color" name="color">
+        <form action="https://example.com/checkout" method="post">
+            <label for="color1">Select Color:</label>
+            <select id="color1" name="color">
               <option value="Black">Black</option>
               <option value="Blue">Blue</option>
               <option value="Green">Green</option>
@@ -86,28 +61,27 @@
               <option value="Gold">Gold</option>
             </select>
           </form>
-        </div>
+        <button onclick="addToCart('sn1',250);">Add to cart</button>
+      </div>
     </div>
 
-    <div class="product-details">
-        <div class="product-image">
-          <img src="https://www.freeride.com/img/review/original/7689_pic1c.jpg" alt="Snowboard Model 3">
-        </div>
+    <div class="product-model">
+          <img src="https://www.tradeinn.com/f/13776/137767767/rossignol-planche-snowboard-xv-xv-m-l.jpg" alt="Snowboard Model 2">
         <div class="product-info">
-          <h3>Snowboard Model 3</h3>
-          <p>Beginner-friendly snowboards with enhanced stability.</p>
-          <p>Price: $150</p>
+          <h3>Rossignol XV Wide Snowboard</h3>
+          <p>Versatile and beginner-friendly snowboard suitable for all skill levels.</p>
+          <p>$140</p>
           <form action="https://example.com/checkout" method="post">
-            <label for="size">Select Size:</label>
-            <select id="size" name="size">
+            <label for="size2">Select Size:</label>
+            <select id="size2" name="size">
               <option value="150cm">150cm</option>
               <option value="155cm">155cm</option>
               <option value="160cm">160cm</option>
             </select>
           </form>
           <form action="https://example.com/checkout" method="post">
-            <label for="size">Select Color:</label>
-            <select id="size" name="size">
+            <label for="color2">Select Color:</label>
+            <select id="color2" name="color">
               <option value="Black">Black</option>
               <option value="Blue">Blue</option>
               <option value="Green">Green</option>
@@ -116,9 +90,39 @@
               <option value="Gold">Gold</option>
             </select>
           </form>
+          <button onclick="addToCart('sn2',180);">Add to cart</button>
+        </div>
+    </div>
+
+    <div class="product-model">
+          <img src="https://images.squarespace-cdn.com/content/v1/637558eccf6f58307d272f25/1669310472113-82SHW1IM332P9FJZIM52/sb_j_tsw.jpg?format=1000w" alt="Snowboard Model 3">
+        <div class="product-info">
+          <h3>Jones Twin Sister Snowboard</h3>
+          <p>Freeride and top-quality snowboard for experimented riders.</p>
+          <p>$230</p>
+          <form action="https://example.com/checkout" method="post">
+            <label for="size3">Select Size:</label>
+            <select id="size3" name="size">
+              <option value="150cm">150cm</option>
+              <option value="155cm">155cm</option>
+              <option value="160cm">160cm</option>
+            </select>
+          </form>
+          <form action="https://example.com/checkout" method="post">
+            <label for="color3">Select Color:</label>
+            <select id="color3" name="color">
+              <option value="Black">Black</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
+              <option value="Pink">Pink</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+          </form>
+
+          <button onclick="addToCart('sn3',150);">Add to cart</button>
         </div>
       </div>
-      <button onclick="addToCart()">Accès au panier</button>
 
   </section>
 </main>
@@ -132,7 +136,6 @@
   </nav>
 </footer>
 
-<script src="../js/cart.js"></script>
 
 </body>
 </html>
