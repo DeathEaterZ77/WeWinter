@@ -111,7 +111,7 @@ header {
     color: #0488D1;
 }
 
-#homepage_front h3 {
+#homepage_front h2 {
     margin-bottom: 15px;
     font-size: 24px;
 }
@@ -464,6 +464,7 @@ tr button:hover{
 .about ul li{
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
 .contact-form .info-form{
@@ -485,7 +486,7 @@ tr button:hover{
 
 .contact-info h3{
     font-family: 'Shrikhand', cursive;
-    font-size: 20px;
+    font-size: 28px;
     color: #0488D1;
 }
 
@@ -498,7 +499,7 @@ tr button:hover{
 }
 
 .contact-info span p{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -539,7 +540,7 @@ footer a:hover {
 
 
 /* media queries */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 680px) {
     #Menu li:not(:last-child) {
         display: none;
     }
